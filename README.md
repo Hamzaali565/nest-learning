@@ -15,7 +15,7 @@
 2- create models folder on the root of src folder.
 
 - your model look like this
-  //\_\_\_\_//F
+  //\_\_\_\_//
   import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
   import { HydratedDocument } from 'mongoose';
 
@@ -30,8 +30,12 @@ email: string;
 @Prop({ isRequired: true, trim: true })
 password: string;
 }
-
 export const UserSchema = SchemaFactory.createForClass(User);
+
+// how to use jwt
+//check this link
+
+- [JWT From nestJs](https://docs.nestjs.com/security/authentication#jwt-token)
 
 // create a new moduble
 // \* nest g mo module-name
