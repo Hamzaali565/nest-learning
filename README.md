@@ -55,8 +55,11 @@ export const UserSchema = SchemaFactory.createForClass(User);
 
 // I have use registerView function in user.controller.ts i've created this function in user.service.ts
 
-  <!-- @Post()
-  signIn(@Body() data: Register) {
-    return this.userService.registerView(data);
-  }
-} -->
+@Post()
+signIn(@Body() data: Register) {
+return this.userService.registerView(data);
+}
+}
+
+// Create middleware(guard)
+// \* nest g guard auth

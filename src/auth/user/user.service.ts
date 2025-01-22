@@ -41,10 +41,24 @@ export class UserService {
     const token = this.jwtService.sign({
       name: user_chk.name,
       email: user_chk.email,
+      _id: user_chk._id,
     });
     return {
       message: 'Login Successfull !!!',
       token,
+    };
+  }
+
+  async profileView(_id: string) {
+    console.log('_id', _id);
+
+    const user = await this.userModel.findById({ _id }, '-password');
+    if (!user) {
+      throw new BadRequestException('User not found !!!');
+    }
+    return {
+      message: 'Profile Viewed',
+      user,
     };
   }
 }
