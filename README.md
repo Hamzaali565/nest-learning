@@ -44,7 +44,7 @@ export const UserSchema = SchemaFactory.createForClass(User);
 // \* nest g controller auth/controller-name
 
 // create a new service in auth folder "You Can write your buisness logic "
-// \* nest g controller auth/controller-name
+// \* nest g service auth/controller-name
 
 // use validation-pipe
 // \* pnpm i class-validator
